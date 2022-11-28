@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Minjoo Choi (Judy)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="acfb71b0-b6a4-4025-ab25-de80662592fd" class="page sans"><header><h1 class="page-title">Minjoo Choi (Judy)</h1></header><div class="page-body"><h1 id="bedc9e26-24a3-4036-b87f-fa1e1bcf25cf" class="">&quot;Beyond the Language Barrier&quot;</h1><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="609b6b70-963e-4884-b2ce-cfff5041bcfb"><div style="font-size:1.5em"><span class="icon">🗣</span></div><div style="width:100%">기술을 이용해 언어의 장벽을 넘고 싶어 NMT 연구를 시작했습니다. 다수의 NMT 프로젝트를 수행하고 논문을 발표하였으며, NMT 스타트업에서 데이터 정제부터 모델 학습까지 모든 과정에 참여했습니다.</div></figure><p id="359a3c4b-e898-47f5-8d1f-5278a56827ef" class="">mjchoi0831@gmail.com</p><p id="7bb3499c-fdfb-49e3-b305-a814e22774f3" class="">010-4806-2347</p><hr id="200bb786-a8da-4b83-ac29-9461acfb1745"/><h1 id="d5c250c7-f022-481d-9407-0a9029d27095" class="">NLP Researcher &amp; Engineer</h1><p id="bdc75989-9f1b-4e17-8715-42426cb55e56" class="">2021.08 ~ 2022.04               BeringLab</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ecdcda14-d291-41fa-b1a6-b0f062c15792"><div style="font-size:1.5em"><span class="icon">👩‍💻</span></div><div style="width:100%">특정 전문 도메인 다국어 번역 모델 개발<ul id="96c13760-828f-46f9-bc5d-8474988cf68c" class="bulleted-list"><li style="list-style-type:disc">다국어 특허 데이터셋 구축 및 정제</li></ul><ul id="386a4a1e-1650-42a0-8e5f-4ece51b36f6f" class="bulleted-list"><li style="list-style-type:disc">법률 전문 다국어 번역 모델, 특허 전문 번역 다국어 모델 학습</li></ul><ul id="0fcc2736-1043-4f8d-ad5c-1a14f2f28c7b" class="bulleted-list"><li style="list-style-type:disc">번역 모델 품질 개선</li></ul></div></figure><h1 id="1a94bae9-14b2-4397-a1df-d6cacdc9528a" class="">Project</h1><h3 id="1f2eb493-cded-4922-9927-fe5a2234187e" class="">Lab Project</h3><ul id="b2651d72-9573-42fc-a297-76f342d51b21" class="toggle"><li><details open=""><summary>[현대자동차 AIR Lab] 신경망 기계번역 모델을 위한 지식 증류 기술 연구 (2021.03 ~ 2021.05)</summary><ul id="59e7f6e3-167c-4f61-8ed8-1a897593c3e9" class="bulleted-list"><li style="list-style-type:disc">과제 목표<ul id="9ad0690b-24ec-4c4a-bbd1-5e6c99dd3d7f" class="bulleted-list"><li style="list-style-type:circle">신경망 기계번역 모델의 메모리 사용량을 줄이고 번역 속도를 증가시키기 위한 모델 경량화 기술 개발</li></ul></li></ul><ul id="d358ef5a-58aa-493f-89be-c31815ac86c4" class="bulleted-list"><li style="list-style-type:disc">연구 결과 (논문)<ul id="e45a24fe-fce9-4b73-9e74-ec8219b4609f" class="bulleted-list"><li style="list-style-type:circle">하단의 &#x27;Shared Attention Network와 Multi-Query Attention을 이용한 Transformer 모델의 디코더 속도 개선 (KCC 2021)&#x27; 참고</li></ul></li></ul></details></li></ul><ul id="9e3365c1-f944-4d09-8710-4d1c5a2de9c3" class="toggle"><li><details open=""><summary>[NCSoft] 인터넷 채팅체에 적응하는 말뭉치 자동 확장 연구 (2020.09 ~ 2021.02)</summary><ul id="e9154e79-39e5-47bb-82cd-d381d5ae3054" class="bulleted-list"><li style="list-style-type:disc">과제 목표<ul id="84f8e44a-be41-4245-9493-63c79d9f10a0" class="bulleted-list"><li style="list-style-type:circle">Multilingual Data 를 한국어로 자동번역하기 위한 선행연구</li></ul><ul id="340e612e-7c31-472f-bac1-2dc6d399922c" class="bulleted-list"><li style="list-style-type:circle">noise 가 심한 채팅체 데이터를 번역하기 위한 자동/반자동 말뭉치 보강 방법론 설계</li></ul></li></ul><ul id="793c8806-9d18-4c80-8666-8de469cfd2c6" class="bulleted-list"><li style="list-style-type:disc">연구 결과 (논문)<ul id="0391fb9f-e4d6-4c17-89fb-c96c9af0c0eb" class="bulleted-list"><li style="list-style-type:circle">하단의 &#x27;채팅체-문어체 스타일 변환 병렬 코퍼스 자동 구축 (KCC 2021)&#x27; 참고</li></ul></li></ul></details></li></ul><ul id="8b6d4567-95fd-49e8-bd5e-063a4e90ba73" class="toggle"><li><details open=""><summary>차세대 정보컴퓨팅 기술개발사업 프로젝트 (2019.09 ~ 2020.01)</summary><ol type="1" id="8658f5cf-f69b-4cd9-866d-f66d23e174ba" class="numbered-list" start="1"><li>사용자 의도 파악 (User Intent) (2019.10~ 2019.12)<ul id="bbedcb1f-347d-49c7-b395-66fa0c7da120" class="bulleted-list"><li style="list-style-type:disc">과제 목표<ul id="398d3774-4547-4833-96c8-17e5f458ebdc" class="bulleted-list"><li style="list-style-type:circle">‘자동차 운전자의 의도 파악’</li></ul></li></ul><ul id="846f0767-eb98-4064-bf45-39b42c59083e" class="bulleted-list"><li style="list-style-type:disc">본인의 역할<ul id="1dbfb6f3-ddad-4a9c-9c4d-360493fb96d7" class="bulleted-list"><li style="list-style-type:circle">자동차 운전자의 의도 파악 맞춤 데이터셋 구축<ul id="7ef72b4d-016a-44ac-b657-0ea3cd471b97" class="bulleted-list"><li style="list-style-type:square">기존의 영문 데이터셋을 자동으로 번역하여 한국어 데이터셋 구축</li></ul></li></ul><ul id="ca510c62-7dcd-4603-8429-e44c584b20a9" class="bulleted-list"><li style="list-style-type:circle">사용자 의도 분류 모델 개발 (SVM 기반)</li></ul><ul id="7cb4387e-b695-47b2-bdbb-91a159f2dfb4" class="bulleted-list"><li style="list-style-type:circle">웹 데모 구현 (Flask 기반)</li></ul></li></ul></li></ol><ol type="1" id="b57bf213-dad7-44fb-9341-3c8611d7e2d8" class="numbered-list" start="2"><li>대규모 한국어 감성 TreeBank 언어자원 구축 (2019.10 ~ 2020.01)<ul id="2ef63c81-5ec9-4b5d-b202-89f2368704d1" class="bulleted-list"><li style="list-style-type:disc">과제 목표<ul id="58385490-7c5f-49b1-8aff-d8ad4b2107fe" class="bulleted-list"><li style="list-style-type:circle">Stanford Sentiment TreeBank 한글화</li></ul></li></ul><ul id="0e5672bd-7958-4c30-b97d-5a405165b400" class="bulleted-list"><li style="list-style-type:disc">본인의 역할<ul id="44aa38f0-bd14-498f-9363-f522c5f3a698" class="bulleted-list"><li style="list-style-type:circle">Google Translate 및 noise 제거를 통해 대규모 데이터셋 구축</li></ul></li></ul></li></ol></details></li></ul><h3 id="23e007ed-8a4e-44c9-999d-36608a3d01e8" class="">Private Project</h3><ul id="e716f30e-b31e-4fdd-a16c-5c3db0587646" class="toggle"><li><details open=""><summary>한-영 관용구 기계번역을 위한 데이터셋 구축, 평가 및 NMT 학습 방법 탐색 (2020.03 ~ 2020.09)</summary><ul id="f077ff41-b58a-42d9-85a3-69693ae08819" class="bulleted-list"><li style="list-style-type:disc">과제 목표<ul id="aaf3f6ef-7713-4546-8812-87cd81bfa517" class="bulleted-list"><li style="list-style-type:circle">관용구는 둘 이상의 단어가 결합하여 특정한 뜻을 생성한 어구로 기계번역 시 종종 오역이 발생</li></ul><ul id="84a8e229-5eae-451f-8ca0-587a291f6e78" class="bulleted-list"><li style="list-style-type:circle">따라서 신경망 기계 번역(Neural Machine Translation)에서 관용구를 효과적으로 번역하려면 관용구에 특화된 번역 쌍 데이터셋과 평가방법, NMT 학습 방법이 필요</li></ul></li></ul><ul id="cd1f5f62-81f9-4238-ba22-c1639f936292" class="bulleted-list"><li style="list-style-type:disc">연구 결과 (논문)<ul id="1a4b8bfb-de19-407e-a5a7-a78297fb398c" class="bulleted-list"><li style="list-style-type:circle">하단의 &#x27;관용구 기계번역을 위한 한-영 데이터셋 구축 및 평가 방법 (KCC 2020)&#x27; 참고<ul id="860be2fe-0d91-4ddf-ac8a-13b6eafca47e" class="bulleted-list"><li style="list-style-type:square">관용구 번역 전용 데이터셋 &#x27;KISS&#x27; 구축</li></ul><ul id="bc4a94d4-97b3-40aa-aec1-9b6ccb203d07" class="bulleted-list"><li style="list-style-type:square">블랙리스트 구축 및 블랙리스트를 이용한 평가 방법 제안</li></ul></li></ul><ul id="8456131a-8939-42cf-ac4d-e1cd3fda54d2" class="bulleted-list"><li style="list-style-type:circle">하단의 &#x27;한-영 관용구 기계번역을 위한 NMT 학습 방법 (HCLT 2020)&#x27; 참고<ul id="1ace74a3-dce7-4979-bed3-da5b622b7b53" class="bulleted-list"><li style="list-style-type:square">NMT에 효과적으로 관용구를 학습시키기 위한 방법론 탐색</li></ul></li></ul></li></ul></details></li></ul><ul id="eb56ce88-a9ba-43a3-995c-76141022fb5e" class="toggle"><li><details open=""><summary>COVID-19 관련 뉴스기사 번역에 특화된 데이터셋 구축 및 NMT 학습 방법 탐색</summary><ul id="3f4ce332-550b-4a37-8747-16564ccbaca5" class="bulleted-list"><li style="list-style-type:disc">ENMLP 2020 에 채택된 논문 내용을 구현해보는 프로젝트<ul id="52d518f6-374d-45d8-b674-22b42b9eab40" class="bulleted-list"><li style="list-style-type:circle">A Multilingual Neural Machine Translation Model for Biomedical Data</li></ul></li></ul></details></li></ul><h1 id="e3e40e2a-74fb-4c39-8b51-b28f3e6e0147" class="">Paper</h1><ul id="8c5ac2d1-ed33-48d1-8caa-4d9ef304439c" class="toggle"><li><details open=""><summary>Shared Attention Network와 Multi-Query Attention을 이용한 Transformer 모델의 디코더 속도 개선 (KCC 2021)</summary><ul id="95aa0f97-3870-45e3-8265-51690fe49aa0" class="bulleted-list"><li style="list-style-type:disc">Paper<figure id="995c8717-5195-4365-8363-9493cf0987f4"><div class="source"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/KCC_Shared_Attention_Network_Multi-Query_Attention__Transformer____.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e3336a8-8850-4b09-b9bc-e47df1edf359/KCC_Shared_Attention_Network_Multi-Query_Attention__Transformer____.pdf</a></div></figure></li></ul><ul id="89ba532f-2575-4ff0-8199-8415ab9c4368" class="bulleted-list"><li style="list-style-type:disc">Abstract<ul id="ebd298a6-a7ff-43d4-b970-6163bb41a8a9" class="bulleted-list"><li style="list-style-type:circle">Transformer를 이용하는 기계번역 모델의 경우 우수한 번역 성능을 보이고 있으나 메모리 사용량이 많으며 번역 속도가 느리다는 단점이 있음</li></ul><ul id="b6549c69-09ec-4b78-838f-454ae2d019ae" class="bulleted-list"><li style="list-style-type:circle">Transformer의 디코더 구조를 개선하여 디코더의 속도를 향상시킴</li></ul></li></ul><ul id="30da85f9-6556-495c-8e43-d190c6906aad" class="bulleted-list"><li style="list-style-type:disc">Contribution<ul id="08b46cbc-5a33-4cdc-8614-e72ee8c81010" class="bulleted-list"><li style="list-style-type:circle">Transformer 모델의 디코더 구조를 수정하여 속도 개선<ol type="1" id="3c548044-dc13-400e-bd2d-9b56ecc87573" class="numbered-list" start="1"><li>인코더 및 디코더 레이어의 개수를 최소화<ul id="295934dc-7a4f-4257-992c-a70b81fb7c78" class="bulleted-list"><li style="list-style-type:disc">((6, 6) → (4, 2))</li></ul><ul id="848d0f4e-661a-4732-8251-fb6701a3248c" class="bulleted-list"><li style="list-style-type:disc">전체 연산량 감소</li></ul></li></ol><ol type="1" id="d50dcd26-ab32-43ab-b9ed-58fedea5d3cc" class="numbered-list" start="2"><li>SAN(Shared Attention Networks)<ul id="ad9de2b2-5bb4-4055-a15c-beb865a51fe4" class="bulleted-list"><li style="list-style-type:disc">인접한 레이어 간의 Self-attention Weight 값 및 Encoder-Decoder Attention 값 공유</li></ul><ul id="f634ae1a-8d1e-4024-a94d-c67e79e2e082" class="bulleted-list"><li style="list-style-type:disc">Attention 에 필요한 연산 횟수를 줄여 속도 향상</li></ul><figure id="f9e3f2b7-ecb8-46fb-b6d2-a604ae9840ba" class="image"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled.png"><img style="width:423px" src="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled.png"/></a><figcaption>SAN Attention 구조</figcaption></figure></li></ol><ol type="1" id="200853f7-d5c3-4c59-884d-17a2ad3e9d9a" class="numbered-list" start="3"><li>MQA (Multi-query Attention)<ul id="05dc10ff-c143-442d-98fc-0607b4ecb672" class="bulleted-list"><li style="list-style-type:disc">Multi-head Attention 모듈의 Key와 Value가 각각 하나의 Attention Head를 공유하도록 수정</li></ul><ul id="4a191561-9441-4ac5-96b6-5c2ee499af57" class="bulleted-list"><li style="list-style-type:disc">연산에 필요한 텐서 크기를 줄여 메모리 대역폭 요구량이 감소하여 연산 속도 향상</li></ul><figure id="49e60411-e4e4-4938-8c17-1a59ff6d0663" class="image"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%201.png"><img style="width:844px" src="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%201.png"/></a><figcaption>MQA einsum 코드</figcaption></figure></li></ol></li></ul><ul id="fa8a7baa-6c4d-480c-aff1-6af06305ac58" class="bulleted-list"><li style="list-style-type:circle">실험결과<ul id="05885544-30c1-4c65-b71e-9fb51e708262" class="bulleted-list"><li style="list-style-type:square">레이어 수와 임베딩 차원 수를 줄일수록 BLEU Score는 소폭 감소하지만 번역 속도 증가</li></ul><ul id="5766776e-31d3-4bdd-9e25-c7215cfb36dd" class="bulleted-list"><li style="list-style-type:square">같은 조건일 경우 본 논문에서 제안한 모델이 가장 작으면서도 번역 속도가 가장 빠름</li></ul><figure id="4e0257b6-2a1a-4d65-aa09-edee9f65bd99" class="image"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%202.png"><img style="width:832px" src="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%202.png"/></a><figcaption>모델 조건에 따른 성능 및 수행시간 측정 결과</figcaption></figure></li></ul></li></ul></details></li></ul><ul id="724c838b-450f-4c40-8e07-c2c5029b8f5d" class="toggle"><li><details open=""><summary>채팅체-문어체 스타일 변환 병렬 코퍼스 자동 구축 (KCC 2021)</summary><ul id="1134a7fb-74c6-4445-ac78-4f736a9155c2" class="bulleted-list"><li style="list-style-type:disc">Paper<figure id="b68b9999-8556-4724-9c77-2e665af02d70"><div class="source"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/KCC_-______.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3aa6b8b2-cdf1-4c8e-b592-98b142c6302c/KCC_-______.pdf</a></div></figure></li></ul><ul id="5e04bff5-2c2f-4773-b20d-b13dbcbd46c6" class="bulleted-list"><li style="list-style-type:disc">Abstract<ul id="ab3ff747-c996-485f-b2a6-fed19aa486da" class="bulleted-list"><li style="list-style-type:circle">인터넷 채팅체를 자연어처리 시스템에서 이용하는 문어체 스타일로 변환하기 위한 선행연구</li></ul><ul id="1583fe9a-9b95-4923-bef9-3c9fb6984cbe" class="bulleted-list"><li style="list-style-type:circle">채팅체-문어체 스타일 변환 병렬 코퍼스 자동 구축</li></ul><ul id="611a6da2-7429-4b8a-9a2c-32b2d0aed620" class="bulleted-list"><li style="list-style-type:circle">초기 병렬 코퍼스의 부정확한 문장 쌍을 자동으로 필터링하는 방법 제안</li></ul><ul id="19953408-3f78-4bfb-88ae-e1544e10296d" class="bulleted-list"><li style="list-style-type:circle">구축된 병렬 코퍼스를 이용하여 자동으로 채팅체-문어체 변환 사전 구축</li></ul></li></ul><ul id="d880aabc-8cd1-4b3c-a9de-fda16d8cc150" class="bulleted-list"><li style="list-style-type:disc">Contribution<ul id="4745563c-4c75-4b8e-b5db-3caf6a0bebac" class="bulleted-list"><li style="list-style-type:circle">채팅체-문어체 문장 쌍으로 구성된 병렬 코퍼스 자동 구축<ul id="94e8018e-22f8-499c-a4a5-f4a571bbbf83" class="bulleted-list"><li style="list-style-type:square">Google Translate API 를 이용한 Round-Trip Translation</li></ul></li></ul><ul id="a8d78f12-7076-4be3-8ac1-dabc11b39169" class="bulleted-list"><li style="list-style-type:circle">자동 필터링 적용<figure id="20bac554-ad41-4639-b441-8a952d31eafb" class="image"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%203.png"><img style="width:835px" src="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%203.png"/></a><figcaption>적용한 필터링 종류</figcaption></figure><figure id="6419cf9c-c605-483a-9eab-02f886994445" class="image"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%204.png"><img style="width:860px" src="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%204.png"/></a><figcaption>필터링된 병렬 코퍼스 예시</figcaption></figure></li></ul><ul id="f364ede0-55e8-40db-884b-f7278a8df4fb" class="bulleted-list"><li style="list-style-type:circle">채팅체-문어체 어휘 변환 사전 구축<ul id="db0c5f84-2457-4aad-928e-7f8667e87f82" class="bulleted-list"><li style="list-style-type:square">Fast-Align 활용<figure id="c1617d50-8c44-4676-bb1a-435176528090" class="image"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%205.png"><img style="width:305px" src="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/Untitled%205.png"/></a><figcaption>단어-단어 변환 사전 예시</figcaption></figure></li></ul></li></ul></li></ul></details></li></ul><ul id="8687751b-bf5a-4c3f-9e96-1ab66db4963c" class="toggle"><li><details open=""><summary>한-영 관용구 기계번역을 위한 NMT 학습 방법 (HCLT 2020)</summary><ul id="2aade0a8-f885-4c1d-aa93-ee072a01e5da" class="bulleted-list"><li style="list-style-type:disc">Paper<figure id="c53e9f70-8d82-4ab5-a6ad-dd4e52dcb05b"><div class="source"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/HCLT2020--____NMT___.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/804c8cd1-d70f-4714-99f1-5e6f5bc50418/HCLT2020--____NMT___.pdf</a></div></figure></li></ul><ul id="c5c18baa-d1a5-4146-bd13-a2568a03b594" class="bulleted-list"><li style="list-style-type:disc">Abstract<ul id="fbbd1ccc-cb40-46d7-8c11-c7060be5fd04" class="bulleted-list"><li style="list-style-type:circle">기존에 구축한 한-영 관용구 기계번역에 특화된 데이터셋을 이용하여 신경망 기계번역 모델에 관용구를 효과적으로 학습시키기 위해 특정 토큰을 삽입하여 문장에 포함된 관용구의 위치를 나타내는 방법을 제안</li></ul><ul id="6f166c61-8637-4a50-92fa-aa4264539da8" class="bulleted-list"><li style="list-style-type:circle">실험 결과, 제안한 방법을 이용하여 학습하였을 때 대부분의 신경망 기계 번역 모델에서 관용구 번역 품질의 향상이 있음을 증명</li></ul></li></ul><ul id="74f01029-8bf7-45ff-aacc-f8254fcba150" class="bulleted-list"><li style="list-style-type:disc">Contribution<ul id="da1dee2a-776d-47fc-9a74-bf2bf1a70a80" class="bulleted-list"><li style="list-style-type:circle">관용구 번역 전용 데이터셋 &#x27;KISS&#x27; 수작업 검증하여 데이터 필터링</li></ul><ul id="ee29d25d-f56c-4c5d-80c6-f21c885c2adc" class="bulleted-list"><li style="list-style-type:circle">NMT에 효과적으로 관용구를 학습시키기 위한 방법론 탐색<ul id="0447d399-c5aa-4fce-98aa-1b0c16e8b842" class="bulleted-list"><li style="list-style-type:square">관용구 시작 및 끝을 나타내는 특수한 토큰을 관용구에 부착</li></ul><ul id="d558ed81-9e56-4974-9e69-5d23e0cfbe2f" class="bulleted-list"><li style="list-style-type:square">총 4가지의 관용구 학습 데이터셋 구축 및 NMT 학습</li></ul><ul id="25f23791-5c58-4395-b592-d81936604b67" class="bulleted-list"><li style="list-style-type:square">관용구가 포함된 문장을 함께 NMT에 학습시킬 경우 번역 품질 향상됨을 증명<ul id="72df00d5-a49f-4467-94db-af68e6d027c6" class="bulleted-list"><li style="list-style-type:disc">한-영 관용구 번역의 경우 특수 토큰을 관용구 앞에만 부착할 경우 번역 성능이 가장 크게 향상됨</li></ul></li></ul></li></ul></li></ul></details></li></ul><ul id="dadba882-0dac-4251-a291-f7ecfff3cc01" class="toggle"><li><details open=""><summary>관용구 기계번역을 위한 한-영 데이터셋 구축 및 평가 방법 (KCC 2020)</summary><ul id="4e3ca0e4-7b0b-41a6-a971-57772da495f4" class="bulleted-list"><li style="list-style-type:disc">Paper<figure id="a3e0bf1a-cdd8-4733-9b1a-3a876be28698"><div class="source"><a href="Minjoo%20Choi%20(Judy)%20acfb71b0b6a44025ab25de80662592fd/KCC____-_____.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6b9ca2b-fe84-4e3c-81e3-c97390ce480c/KCC____-_____.pdf</a></div></figure></li></ul><ul id="18f516cf-4ab0-443e-b7e1-8e27df6b4f1c" class="bulleted-list"><li style="list-style-type:disc">Abstract<ul id="e6cab22f-02f5-4e85-8a98-68a1de550ec4" class="bulleted-list"><li style="list-style-type:circle">관용구는 둘 이상의 단어가 결합하여 특정한 뜻을 생성한 어구로 기계번역 시 종종 오역이 발생</li></ul><ul id="5f5ed45f-506d-4367-ad5d-96cd6755c3cc" class="bulleted-list"><li style="list-style-type:circle">이는 관용구가 지닌 함축적인 의미를 정확하게 번역할 수 없는 기계번역의 한계</li></ul><ul id="e2cbdf2c-068d-4fc0-b265-158a3d300239" class="bulleted-list"><li style="list-style-type:circle">따라서 신경망 기계 번역(Neural Machine Translation)에서 관용구를 효과적으로 학습하고 번역 결과를 평가하려면 관용구에 특화된 번역 쌍 데이터셋과 평가방법이 필요</li></ul><ul id="49d96a99-b573-4185-8ea2-5ba021a541aa" class="bulleted-list"><li style="list-style-type:circle">관용구 기계번역을 위한 한-영 번역 쌍 데이터셋을 구축하는 방법과 관용구 번역 결과를 평가하기 위해 블랙리스트를 구축하는 방법 제안</li></ul></li></ul><ul id="ad7ad81a-77b5-41d4-b059-78ff16edd685" class="bulleted-list"><li style="list-style-type:disc">Contribution<ul id="42e8de3f-a05f-4338-989e-d68128a57cea" class="bulleted-list"><li style="list-style-type:circle">관용구 번역 전용 데이터셋 &#x27;KISS&#x27; 구축</li></ul><ul id="23629a0d-e61b-4d1f-a6b4-3685f49843bc" class="bulleted-list"><li style="list-style-type:circle">블랙리스트 구축 및 블랙리스트를 이용한 평가 방법 제안</li></ul></li></ul></details></li></ul><h1 id="cbe39e74-000c-4c1a-a506-61c831ab7cac" class="">Skill</h1><p id="406dccb3-acec-43bd-9348-ca13aa2bae93" class="">Python</p><p id="5d9c7697-3a65-4abb-b6cb-0689dba5b22d" class="">Pytorch (OpenNMT)</p><h1 id="414ac1ac-0aeb-4645-be26-c60ae9d9cf6c" class="">Conference</h1><ul id="91d74308-8f48-4b91-bb09-a0954afe772d" class="toggle"><li><details open=""><summary>2021.08               고군분투기 52차</summary><p id="e99b06e7-6f09-438d-ad8d-5c47d2fcc7f7" class="">AI, 이세계로 가는 길을 알려줘</p><blockquote id="9a725d73-b90b-4ed9-8e28-ba53f7b74203" class="">TF-IDF 와 SVM 을 이용한 사용자 의도 파악 모델 개발</blockquote><figure id="0affd4fa-2d0f-4c45-b410-80c4872acb06"><a href="https://kodeveloper.com/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2021/08/19/struggle-52/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://kodeveloper.com/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2021/08/19/struggle-52/</div></div></a></figure></details></li></ul><ul id="8b5d0b8f-7d5d-40a0-8676-324cdacfc7f4" class="toggle"><li><details open=""><summary>2021.04               고군분투기 48차</summary><p id="c93ae475-f4c1-4fb5-b970-14c9098b6be4" class="">찰떡같이 알아듣는 번역기를 만들어 보자</p><blockquote id="dba8c8d2-66e1-4249-bcb9-c3b86c883473" class="">언어의 장벽을 기술로 뛰어넘고자 기계번역을 연구하는 대학원생입니다. 신경망 기반 기계번역은 뛰어난 번역 성능을 보이나 약간의 한계가 있는데, 그 중 하나는 관용구를 인간만큼 자연스럽게 번역할 수 없다는 점입니다. 이 점에 착안하여 번역기에게 관용구 번역을 가르치기 위한 연구를 해 보았습니다.</blockquote><figure id="1efc478c-a3dd-4765-a4c4-a8149c09918f"><a href="https://kodeveloper.com/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2021/04/15/struggle-48/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://kodeveloper.com/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2021/04/15/struggle-48/</div></div></a></figure></details></li></ul><ul id="1675d081-faa5-4500-a465-278c48f530d3" class="toggle"><li><details open=""><summary>2021.03               고군분투기 47차</summary><p id="52112867-c616-43f0-82c7-a31980a970b9" class="">기계번역, 어디까지 왔니</p><blockquote id="493a2e7a-b7f8-426d-9d01-6e9be17d9379" class="">언어의 장벽을 기술로 뛰어넘고자 기계번역을 연구하는 대학원생입니다. 40분만에 이해하는 인공지능 시대의 기계번역을 발표합니다.</blockquote><figure id="9385601e-7a5a-407c-9281-f62a910c2145"><a href="https://kodeveloper.com/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2021/03/18/struggle-47/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://kodeveloper.com/%EA%B3%A0%EA%B5%B0%EB%B6%84%ED%88%AC%EA%B8%B0/2021/03/18/struggle-47/</div></div></a></figure></details></li></ul><ul id="566a1158-e9b3-4d88-8d38-3fba5669e639" class="toggle"><li><details open=""><summary>2020.08                     LangCon</summary><p id="0a57a62c-ed75-42ff-bf26-c7bcf8af9d71" class="">관용구 기계번역을 위한 한-영 데이터셋 구축 및 평가 방법</p><figure id="e7bb5a02-2b69-4a2a-bb2d-fa98d1e5721d"><a href="https://songys.github.io/2020LangconOnOff/about/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">발표소개</div><div class="bookmark-description">자연어 처리 데이터에게 길을 묻다.</div></div><div class="bookmark-href">https://songys.github.io/2020LangconOnOff/about/</div></div><img src="https://songys.github.io/2020LangconOnOff/pic/sangwonpark.jpg" class="bookmark-image"/></a></figure></details></li></ul><hr id="8db5c2e8-4e83-4928-b69f-8d3038064da0"/><h1 id="bbd56b33-3d60-4962-8539-44f11958b55f" class="">Career (Malware Analyst)</h1><p id="2e759422-0c36-424b-a9ba-5de607385afa" class="">2018.10 ~ 2019.06    파고네트웍스 (팀장)</p><p id="24b23ec4-f8b2-49e3-adb6-d319d7a99f92" class="">2014.10 ~ 2017.02    하우리</p><p id="ac807527-4929-4aee-a918-6a519c33b38b" class="">2014.01 ~ 2014.09    SK인포섹</p><p id="4727bace-d114-4378-9d96-2d71b7b415b3" class="">2012.12 ~ 2013.11    이스트소프트</p><h3 id="eff85692-7693-4f0e-b238-89418fd77ef7" class="">Teaching (Malware Analysis)</h3><p id="b0fbd14d-c060-4560-b1d3-d0986273a8ce" class="">2018.01,  2019.02      파고네트웍스 내부 직원교육</p><p id="4ae382b5-d0b6-49e7-95e9-a7c825c7855b" class="">2016.12                     국방부 군 전용백신 교육</p><p id="937c54be-dfe7-48b7-a7da-42eeefa17c71" class="">2016.10                     삼성 SDS 악성코드 분석 세미나</p><p id="02efd9c2-7d54-4255-9e3e-3cf374e8a730" class="">2016.05                     신한금융그룹 정보보호 직무교육</p><p id="96cc3e64-cd85-4b04-91a8-24e8903de824" class="">2014.06                     고용노동 사이버안전센터 내부 직원교육</p><hr id="ddf344ab-0f41-4e4e-8765-9ba186905647"/><h1 id="eb36becf-ab09-4a27-837a-3ceca916d959" class="">Education</h1><p id="edc30112-86ec-4b42-ad42-aedebeb93bcb" class="">2020.09 ~  휴학        강원대학교 컴퓨터과학과 Intelligence Software Lab</p><p id="fc9aac94-3d0e-4bc4-8c50-878671ca32c5" class="">2019.09 ~ 2020.06    국민대학교 컴퓨터공학과 NLP Lab</p><p id="0daa468f-a1c5-461f-9260-51b2d97f9f30" class="">2009.03 ~ 2014.08    숭실대학교 컴퓨터학부 (B.S)</p><h1 id="91de61d3-43c3-4b31-a437-885f00580ac7" class="">Teaching</h1><h3 id="2bc615a5-f44a-437d-9b97-3de6b94fcfaf" class="">Programming (Python)</h3><p id="1e31ffcc-b8b9-4423-ab37-5e360bc947b9" class="">2019.09 ~ 2020.06    국민대학교 컴퓨터프로그래밍 1, 2 <strong>(※ 강의평가 1위)</strong></p><h3 id="4448e15b-3ff7-4b7a-81e8-afb4490b0b05" class="">Volunteering</h3><ul id="42b85a77-57d6-4e90-8b8f-3353fb28b365" class="bulleted-list"><li style="list-style-type:disc">2021.08  한국지능정보사회진흥원 월드프렌즈 ICT 봉사단 E-Volunteer<ul id="b5e890e8-af9c-4278-a4fe-f14cd4148e79" class="bulleted-list"><li style="list-style-type:circle"><strong>ICT Education Leader, 우수상 🥉</strong></li></ul><ul id="36518b84-33ff-4516-9255-6aa389a9b67d" class="bulleted-list"><li style="list-style-type:circle">(우즈베키스탄 Tashkent University of Information Technologies (TUIT) 교,강사 대상 AI교육)</li></ul></li></ul><ul id="03d5bedc-b87e-4eb2-bdd7-c6336d45860f" class="bulleted-list"><li style="list-style-type:disc">2010.08 ~ 2011.06    초록우산 어린이재단 가정위탁지원 멘토링 봉사활동<ul id="1014eb9a-46b2-42f3-a0cd-a0cc3098cac7" class="bulleted-list"><li style="list-style-type:circle">(고등학생 위탁가정 학생을 대상으로 수학과목 지도, 총 100시간 수행)</li></ul></li></ul><hr id="d384a227-35d4-459a-a23b-f421c07716df"/><h1 id="1aa5709c-53e9-49bd-bd43-51797b280b80" class="">Overseas Experience</h1><p id="d8fe59ca-ac4a-4702-b516-3861b2b48be7" class="">2018.02 ~ 2018.09    프랑스 워킹홀리데이</p><h1 id="784672ea-9bb2-4688-abc3-3167cc8aeff6" class="">Certificate</h1><p id="1ad85c1d-36dd-4f99-843a-ba35ce402f3d" class="">정보처리기사 (2014)</p><p id="30cdb5cb-5389-47ff-9f18-408f5a7ac404" class="">심리상담사 (2017)</p><p id="34581a34-4bc4-4abd-9291-17d62db9e315" class="">KOICA ODA (2020)</p><h1 id="5ff2c1d8-89fc-4e45-83ff-88c9cadf7ba6" class="">Language</h1><p id="12c51e6a-4f26-4b57-ab75-8f16e10b0d1c" class="">프랑스어 (DELF A2), 영어</p><p id="28a63361-b4d0-4b82-855a-970985514ad8" class="">약간의 스페인어, 일본어, 중국어</p><p id="fa0529c5-be66-4e9e-bbd8-4c8011927f53" class="">
+</p></div></article></body></html>
